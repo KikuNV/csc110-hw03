@@ -1,7 +1,7 @@
 """
 Name: (KIKU NAGAI-VELASQUEZ	)
-Peers: ()
-References: ()
+Peers: (n/a)
+References: (n/a)
 """
 
 # imported modules
@@ -23,8 +23,9 @@ def read_five_ints():
     "Error in read_five_ints: input integer outside of range".
     """
     for idx in range ( len(grades) ):
+    
         grade= (input("Give me the next grade in [0 to 10]:"))
-        cond_int = grade.isdigit()
+        cond_int = grade.isdigit() #checks to see if grade is a valid digit (even if its a string!)
         if not cond_int:
             print("Error in read_five_ints: input string is not for an integer")
             exit()
@@ -60,6 +61,7 @@ def pick_averaging_method():
     'Error in pick_averaging_method: incorrect option picked'.
     """
     select_mode= input("Pick 'a' for mean, 'b' for median, 'c' for mode: ")
+    #select mode is the chosen mode by the user
     if select_mode == "a":
         print("picked: Mean")
         avg = statistics.mean(grades)
